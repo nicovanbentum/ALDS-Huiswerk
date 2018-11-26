@@ -29,7 +29,7 @@ def syntaxCorrect(string):
     else:
         return False
 
-testchars1 = "(((<>))" #should return true
+testchars1 = "((<>))" #should return true
 print(syntaxCorrect(testchars1))
 
 testchars2 = "([)]" #should return false
@@ -41,7 +41,7 @@ print(syntaxCorrect(testchars3))
 testchars4 = "(<>)[[<>]]" #should return true
 print(syntaxCorrect(testchars4))
 
-testchars5 = "(<<[)<]])" #should return false
+testchars5 = "(([<<>]))" #should return false
 print(syntaxCorrect(testchars5))
 
 
