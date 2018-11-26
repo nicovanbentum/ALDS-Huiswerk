@@ -45,7 +45,7 @@ def qsort_worst_pivot(a, low=0,high=-1):
     if high == -1:
         high = len(a) -1
     if low < high:
-        swap(a, low, high)
+        swap(a, low, high) #instead of a random integer we swap low with high
         m = low
         for j in range(low+1, high+1):
             if a[j] < a[low]:
