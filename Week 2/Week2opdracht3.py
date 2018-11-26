@@ -19,25 +19,30 @@ def syntaxCorrect(string):
                 return False
             elif last_pushed_char == '[' and char != ']':
                 return False
+            elif last_pushed_char == None:
+                return False
             else:
                 continue
                 
-    return True
+    if char_stack.isEmpty():
+        return True
+    else:
+        return False
 
-testchars1 = "((<>))" #should return true
-print(testchars1 + " correct: " + str(syntaxCorrect(testchars1)))
+testchars1 = "(((<>))" #should return true
+print(syntaxCorrect(testchars1))
 
 testchars2 = "([)]" #should return false
-print(testchars2 + " correct: " + str(syntaxCorrect(testchars2)))
+print(syntaxCorrect(testchars2))
 
 testchars3 = "[<(())>]" # should return true
-print(testchars3 + " correct: " + str(syntaxCorrect(testchars3)))
+print(syntaxCorrect(testchars3))
 
 testchars4 = "(<>)[[<>]]" #should return true
-print(testchars4 + " correct: " + str(syntaxCorrect(testchars4)))
+print(syntaxCorrect(testchars4))
 
 testchars5 = "(<<[)<]])" #should return false
-print(testchars5 + " correct: " + str(syntaxCorrect(testchars5)))
+print(syntaxCorrect(testchars5))
 
 
 
