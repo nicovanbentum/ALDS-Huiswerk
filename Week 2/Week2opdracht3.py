@@ -25,19 +25,19 @@ def syntaxCorrect(string):
     return True
 
 testchars1 = "((<>))" #should return true
-print(syntaxCorrect(testchars1))
+print(testchars1 + " correct: " + str(syntaxCorrect(testchars1)))
 
 testchars2 = "([)]" #should return false
-print(syntaxCorrect(testchars2))
+print(testchars2 + " correct: " + str(syntaxCorrect(testchars2)))
 
 testchars3 = "[<(())>]" # should return true
-print(syntaxCorrect(testchars3))
+print(testchars3 + " correct: " + str(syntaxCorrect(testchars3)))
 
 testchars4 = "(<>)[[<>]]" #should return true
-print(syntaxCorrect(testchars4))
+print(testchars4 + " correct: " + str(syntaxCorrect(testchars4)))
 
 testchars5 = "(<<[)<]])" #should return false
-print(syntaxCorrect(testchars5))
+print(testchars5 + " correct: " + str(syntaxCorrect(testchars5)))
 
 
 
