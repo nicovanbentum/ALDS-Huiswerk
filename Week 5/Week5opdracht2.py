@@ -40,12 +40,13 @@ def has_cycles(G, s):
     while Q:
         current = Q.pop(0)
         for v in G[current]:
-            if v in marked:
-                return True
-            else:
+            if v not in marked:
                 Q.append(v)
                 marked.append(v)
-                G[v].remove(current)
+            else:
+                if current not in G[v]:
+                    return True
+
     return False
 
 print(has_cycles(Graph_cycles, v[1]))
